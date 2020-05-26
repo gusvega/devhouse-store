@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 
-import HomePage from './pages/homepages/homepage.component';
+import HomePage from './pages/homepage/homepage.component';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import ShopPage from './pages/shop/shop.component';
 import CheckoutPage from './pages/checkout/checkout.component'
 import Header from './components/header/header.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import { setCurrentUser } from './redux/user/user.actions';
-import {selectCurrentUser} from './redux/user/user.selector'
+import {selectCurrentUser} from './redux/user/user.selectors'
 import {createStructuredSelector} from 'reselect'
 
 
