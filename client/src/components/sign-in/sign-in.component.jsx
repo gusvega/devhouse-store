@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import FormInput from '../form-input/form-input.component';
@@ -15,13 +15,13 @@ import {
   ButtonsBarContainer
 } from './sign-in.styles';
 
-const SignIn = ({emailSignInStart, googleSignInStart}) => {
- const [userCredentials, setCredential] = useState({
-  email: '',
-  password: ''
- })
+const SignIn = ({ emailSignInStart, googleSignInStart }) => {
+  const [userCredentials, setCredentials] = useState({
+    email: '',
+    password: ''
+  });
 
- const {email, password} = userCredentials
+  const { email, password } = userCredentials;
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -32,7 +32,7 @@ const SignIn = ({emailSignInStart, googleSignInStart}) => {
   const handleChange = event => {
     const { value, name } = event.target;
 
-    setCredential({...userCredentials, [name]: value });
+    setCredentials({ ...userCredentials, [name]: value });
   };
 
   return (
@@ -70,7 +70,7 @@ const SignIn = ({emailSignInStart, googleSignInStart}) => {
       </form>
     </SignInContainer>
   );
-}
+};
 
 const mapDispatchToProps = dispatch => ({
   googleSignInStart: () => dispatch(googleSignInStart()),
